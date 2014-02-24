@@ -271,6 +271,10 @@ final class WooCommerce {
 		if ( ! defined( 'WC_DELIMITER' ) ) {
 			define( 'WC_DELIMITER', '|' );
 		}
+
+		if ( ! defined( 'WC_LOG_PATH' ) ) {
+			define( 'WC_LOG_PATH', $this->plugin_path() . 'logs' );
+		}
 	}
 
 	/**

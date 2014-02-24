@@ -51,7 +51,7 @@ class WC_Logger {
 		if ( isset( $this->_handles[ $handle ] ) )
 			return true;
 
-		if ( $this->_handles[ $handle ] = @fopen( WC()->plugin_path() . '/logs/' . $this->file_name( $handle ) . '.txt', 'a' ) )
+		if ( $this->_handles[ $handle ] = @fopen( WC_LOG_PATH . $this->file_name( $handle ) . '.txt', 'a' ) )
 			return true;
 
 		return false;
